@@ -82,7 +82,7 @@ def test_animal_feed_method(name, appetite, output):
     f = io.StringIO()
     with redirect_stdout(f):
         assert animal.feed() == appetite
-        assert f.getvalue() == output
+    assert f.getvalue() == output
 
 
 def test_animal_feed_not_hungry_animal():
